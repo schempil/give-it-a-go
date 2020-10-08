@@ -38,6 +38,7 @@ func randomFormat() string {
 		"Hi, %v. Welcome!",
 		"Great to see you, %v!",
 		"Hail, %v! Well met!",
+		"Yoo %v, whaz up?",
 	}
 
 	return formats[rand.Intn(len(formats))]
