@@ -20,3 +20,11 @@ func TestHelloEmpty(t *testing.T) {
 		t.Fatalf(`Hello("") = %q, %v, want "", error`, message, error)
 	}
 }
+
+func TestHelloNames(t *testing.T) {
+	names := []string{"Philipp", "Minnos", "Emma"}
+	messages, error := Hellos(names)
+	if len(messages) != 3 || error != nil {
+		t.Fatalf(`Hello("Philipp", "Minnos", "Emma") = %q, %v, want "Philipp", "Minnos", "Emma", error`, messages, error)
+	}
+}
